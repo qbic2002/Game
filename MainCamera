@@ -1,0 +1,26 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Spawnast : MonoBehaviour {
+    public GameObject asteroid;
+	
+	void Start () {
+        StartCoroutine(Spawn());
+		
+	}
+    IEnumerator Spawn() {
+        while (true)
+        {
+            Instantiate(asteroid, new Vector2 (Random.Range(0f, 10f), Random.Range(0f, 10f)), Quaternion.Euler(0,0,Random.Range(0,180)));
+            yield return new WaitForSeconds(2f);
+          }
+    }
+        
+
+	
+	
+	void Update () {
+		
+	}
+}
