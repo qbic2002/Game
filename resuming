@@ -1,0 +1,12 @@
+using UnityEngine.SceneManagement;
+using UnityEngine;
+
+public class resuming : MonoBehaviour {
+    public GameObject resume;
+
+    private void OnMouseDown()
+    {
+        resume.SetActive(false);
+        Time.timeScale = 1f;
+    }
+}
