@@ -1,0 +1,16 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+public class pausing : MonoBehaviour {
+    public GameObject pause;
+    public GameObject resume;
+
+	
+    private void OnMouseDown()
+    {
+        resume.SetActive(true);
+        Time.timeScale = 0f;
+        
+        
+    }
+    
+}
